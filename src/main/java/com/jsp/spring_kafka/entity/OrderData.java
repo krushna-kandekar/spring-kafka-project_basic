@@ -42,8 +42,7 @@ public class OrderData {
     private Double  latitude;
 
     private Double longitude;
-
-
+    
     public String toJson() {
         return new Gson().toJson(this);
     }
