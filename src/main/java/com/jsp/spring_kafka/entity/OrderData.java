@@ -47,7 +47,4 @@ public class OrderData {
     public String toJson() {
         return new Gson().toJson(this);
     }
-//    public void setCreatedTimestamp(Instant now) {
-//
-//    }
 }
