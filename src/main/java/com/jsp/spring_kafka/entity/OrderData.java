@@ -1,12 +1,14 @@
 package com.jsp.spring_kafka.entity;
 
 import com.google.gson.Gson;
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.validation.constraints.NotBlank;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 import lombok.Setter;
+import org.hibernate.annotations.CreationTimestamp;
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
@@ -16,10 +18,6 @@ import java.time.Instant;
 
 @Getter
 @Setter
-
-//@Service
-//@RequiredArgsConstructor
-//@Component
 @Entity
 public class OrderData {
 
@@ -37,6 +35,8 @@ public class OrderData {
 
     private String country;
 
+    @Column(nullable = false, updatable = false)
+    @CreationTimestamp
     private Timestamp createdTimestamp;
 
     private Double  latitude;
